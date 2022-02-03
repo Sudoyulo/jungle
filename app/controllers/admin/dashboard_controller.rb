@@ -4,5 +4,9 @@ class Admin::DashboardController < ApplicationController
   def show
     @product_count = Product.count
     @category_count = Category.count
+
+    @soldout_count = Product.where(quantity: 0)
+    @category_all = Category.all
+
   end
 end

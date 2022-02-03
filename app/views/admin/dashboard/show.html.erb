@@ -1,5 +1,26 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+ <div class="order-summary jumbotron">
 
-You have <%= @product_count %> products and
-<%= @category_count %> categories
+  <div class="panel panel-default items">
+    You have <%= @product_count %> products. 
+    <br>  
+    <% if @soldout_count%>
+      Sold out items: 
+        <% if @soldout_count.length > 0%>
+
+          <% @soldout_count.each do |item| %>
+            <%= item.name %> 
+
+          <% end %> 
+        <% end %>
+    <% end %>
+  <div>
+<br>
+  <div class="panel panel-default items">
+    You have <%= @category_all.length %> categories of products:
+
+  <% @category_all.each.with_index do |cat, i| %>
+    <a href="categories/<%= i + 1 %>" > <%= cat.name%> </a>
+  <% end%>
+
+  <div>
+<div>
