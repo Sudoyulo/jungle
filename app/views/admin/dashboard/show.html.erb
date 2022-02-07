@@ -1,26 +1,22 @@
  <div class="order-summary jumbotron">
-
+  <h1>Dashboard</h1>
   <div class="panel panel-default items">
     You have <%= @product_count %> products. 
     <br>  
     <% if @soldout_count%>
       Sold out items: 
         <% if @soldout_count.length > 0%>
-
           <% @soldout_count.each do |item| %>
-            <%= item.name %> 
-
+            <a href="/products/<%= item.id%>"> <%= item.name %> </a>
           <% end %> 
         <% end %>
     <% end %>
   <div>
-<br>
+  <br>
   <div class="panel panel-default items">
     You have <%= @category_all.length %> categories of products:
-
-  <% @category_all.each.with_index do |cat, i| %>
+    <% @category_all.each.with_index do |cat, i| %>
     <a href="categories/<%= i + 1 %>" > <%= cat.name%> </a>
-  <% end%>
-
-  <div>
-<div>
+    <% end%>
+  </div>
+</div>
