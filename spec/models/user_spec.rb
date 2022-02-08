@@ -109,6 +109,7 @@ RSpec.describe User, type: :model do
 
   describe '.authenticate_with_credentials' do
     it "should return a user if email and password match" do
+
       user = User.create(
         firstname: "harry",
         lastname: "potter",
@@ -116,7 +117,7 @@ RSpec.describe User, type: :model do
         password: "wizard",
         password_confirmation: "wizard"
         )
-        response = user.authenticate_with_credentials(user.email, user.password_digest)
+        response = user.authenticate_with_credentials(user.email, "wizard")
       expect(response).not_to be_nil
       expect(response[:email]).to eq(user.email)
     end

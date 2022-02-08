@@ -1,4 +1,4 @@
-include BCrypt
+
 
 class User < ActiveRecord::Base
 
@@ -20,8 +20,9 @@ class User < ActiveRecord::Base
     # check if exists in the db return user object or nil
 
     user = User.find_by(email: userEmail)
-
-    if (Password.new(user[:password_digest]).to_s == userPassword)
+    hashedPass = BCrypt::Password.new(user.password_digest)
+    
+    if (hashedPass == userPassword)
       return user
     else
       return nil
