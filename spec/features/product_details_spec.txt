@@ -23,6 +23,6 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     expect(page).to have_content("Description")
     # DEBUG
     save_screenshot
-    
+
   end
 end
