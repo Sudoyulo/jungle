@@ -31,3 +31,18 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+
+## Screenshots
+
+Electronics:
+!["Electronic category"](https://github.com/Sudoyulo/jungle/blob/master/docs/electronics.png?raw=true)
+
+Sold Out:
+!["Sold out"](https://github.com/Sudoyulo/jungle/blob/master/docs/sold%20out.png?raw=true)
+
+Cart:
+!["Cart"](https://github.com/Sudoyulo/jungle/blob/master/docs/cart.png?raw=true)
+
+Order Summary:
+!["Order Summary"](https://github.com/Sudoyulo/jungle/blob/master/docs/order.png?raw=true)
